@@ -7,10 +7,10 @@ from ulauncher.api.shared.action.RenderResultListAction import RenderResultListA
 from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
 import subprocess
 
-class RunExtension(Extension):
+class ExecTerminal(Extension):
 
     def __init__(self):
-        super(RunExtension, self).__init__()
+        super(ExecTerminal, self).__init__()
         self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
         self.subscribe(ItemEnterEvent, ItemEnterEventListener())
 
@@ -39,4 +39,4 @@ class ItemEnterEventListener(EventListener):
         return RenderResultListAction([])
 
 if __name__ == '__main__':
-    RunExtension().run()
+    ExecTerminal().run()
